@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Холодильник — карточка товара | Demo Store</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header__inner">
+      <div class="logo">
+      <img class="logo__image" src="./images/snowflake.jpg" alt="Снежинка">
+        <h1 class="logo__name"> FrigoShop</h1>
+      </div>
+
+
+
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Каталог</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+
+        <!-- <ul class="nav__list">
+          <li><a href="#" class="nav__link">Каталог</a></li>
+          <li><a href="#" class="nav__link">Доставка</a></li>
+          <li><a href="#" class="nav__link">Контакты</a></li>
+        </ul> -->
+        
+      </nav>
+      <div class="cart">
+        <button class="cart__button">
+          <span class="cart__count">0</span>
+          <svg class="cart__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 4h-2l-1 2h2l3.6 7.6-1.35 2.45A1 1 0 0 0 9 18h10v-2H9.42l1-1.8h6.83a1 1 0 0 0 .9-.56l3.1-6.2A1 1 0 0 0 20.4 6H7.4l-.7-2zM7 20a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 .001 3.999A2 2 0 0 0 17 20z"/>
+          </svg>
+       
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="product">
+      <div class="container">
+        <article class="product__card">
+          <img src="./photo/17117_z_17117_z_REF603BBNPVC-S20.jpg" alt="Товар" class="product__image">
+          <h2 class="product__title">FrostFree 300 XL</h2>
+          <p class="product__price">Цена: 999 руб.</p>
+          <div class="product__rating" aria-label="Рейтинг 3 из 5">
+            <span class="star active">★</span>
+            <span class="star active">★</span>
+            <span class="star active">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <div class="product__actions">
+            <button class="btn add-to-cart">Добавить в корзину</button>
+            <button class="btn info-btn">i</button>
+          </div>
+        </article>
+
+        <section class="related-products">
+          <h3>Похожие товары</h3>
+          <ul class="products-list">
+            <li>
+              <article class="product__card">
+                <img src="https://via.placeholder.com/200x200" alt="Товар 1">
+                <h4>Товар 1</h4>
+                <p>Цена: 499 руб.</p>
+                <div class="product__rating">
+                  <span class="star active">★</span>
+                  <span class="star active">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                </div>
+                <button class="btn add-to-cart">В корзину</button>
+              </article>
+            </li>
+            <li>
+              <article class="product__card">
+                <img src="https://via.placeholder.com/200x200" alt="Товар 2">
+                <h4>Товар 2</h4>
+                <p>Цена: 599 руб.</p>
+                <div class="product__rating">
+                  <span class="star active">★</span>
+                  <span class="star active">★</span>
+                  <span class="star active">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                </div>
+                <button class="btn add-to-cart">В корзину</button>
+              </article>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <section>
+        <h2>Контакты</h2>
+        <address>
+          г. Минск, ул. Примерная, 12<br>
+          Тел.: <a href="tel:+375291234567">+375 (29) 123-45-67</a><br>
+          Email: <a href="mailto:hello@demostore.by">hello@demostore.by</a>
+        </address>
+      </section>
+      <section>
+        <h2>Ссылки</h2>
+        <ul>
+          <li><a href="#">Политика конфиденциальности</a></li>
+          <li><a href="#">Условия продажи</a></li>
+          <li><a href="#">Возврат товара</a></li>
+        </ul>
+      </section>
+    </div>
+  </footer>
+
+  <dialog id="productDialog">
+    <form method="dialog">
+      <h2>Подробное описание</h2>
+      <p>FrostFree 300 XL — современный двухкамерный холодильник с системой NoFrost, инверторным компрессором и расширенной зоной свежести. Удобная организация пространства, экономичность и низкий уровень шума.</p>
+      <menu>
+        <button value="cancel" class="btn">Закрыть</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <script src="./js/script.js"></script>
+</body>
