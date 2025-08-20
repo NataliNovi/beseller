@@ -36,7 +36,50 @@ window.addEventListener("scroll", () => {
 });
 
 // Модальное окно
-const infoBtn = document.querySelector(".info-btn");
-const productDialog = document.getElementById("productDialog");
+// const infoBtn = document.querySelector(".info-btn");
+// const productDialog = document.getElementById("productDialog");
 
-infoBtn.addEventListener;
+// infoBtn.addEventListener;
+
+// const infoBtn = document.getElementById("infoBtn");
+// const productDialog = document.getElementById("productDialog");
+// const closeBtn = document.getElementById("closeBtn");
+// const overlay = document.getElementById("overlay");
+
+// infoBtn.addEventListener("click", () => {
+//   productDialog.showModal();
+//   overlay.classList.add("active");
+// });
+
+// closeBtn.addEventListener("click", () => {
+//   productDialog.close();
+//   overlay.classList.remove("active");
+// });
+
+// // Закрытие кликом по фону
+// overlay.addEventListener("click", () => {
+//   productDialog.close();
+//   overlay.classList.remove("active");
+// });
+
+document.querySelectorAll(".productInfo").forEach((product) => {
+  const infoBtn = product.querySelector(".infoBtn");
+  const productDialog = product.querySelector(".productDialog");
+  const closeBtn = product.querySelector(".closeBtn");
+  const overlay = product.querySelector(".overlay");
+
+  infoBtn.addEventListener("click", () => {
+    productDialog.showModal();
+    overlay.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    productDialog.close();
+    overlay.classList.remove("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    productDialog.close();
+    overlay.classList.remove("active");
+  });
+});

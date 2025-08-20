@@ -1,13 +1,12 @@
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: 'Philosofer', serif;
 }
 body,
 p {
   font-family: 'OpenSans', sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 @font-face {
   font-family: 'Philosopher';
@@ -331,7 +330,7 @@ body {
   left: 0;
   width: 100%;
   height: fit-content;
-  background: white;
+  background-color: #f6f8fc;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transition: top 0.3s ease;
@@ -347,6 +346,8 @@ body {
 }
 .site-header .logo__image {
   width: 100px;
+  border-radius: 50px;
+  margin-right: 10px;
 }
 .site-header .logo__name {
   color: #14498a;
@@ -361,11 +362,11 @@ body {
 }
 .site-header .nav a {
   text-decoration: none;
-  color: #333;
+  color: #14498a;
 }
 .site-header .cart__count {
-  background: #f1c40f;
-  color: white;
+  background: #e4a106;
+  color: #f6f8fc;
   padding: 2px 6px;
   border-radius: 50%;
   margin-left: 5px;
@@ -374,44 +375,89 @@ main {
   padding-top: 100px;
 }
 .product__card {
-  border: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  border: 1px solid #d4dfed;
   padding: 15px;
   margin-bottom: 30px;
   text-align: center;
 }
-.product__card img {
+.product__description {
+  text-align: left;
+}
+.product img {
   max-width: 100%;
 }
-.product__card .product__rating {
+.product .product__rating {
   margin: 10px 0;
 }
-.product__card .product__rating .star {
+.product .product__rating .star {
   font-size: 20px;
   cursor: pointer;
   color: #ccc;
 }
-.product__card .product__rating .star.active {
+.product .product__rating .star.active {
   color: #14498a;
 }
-.product__card .btn {
+.product .btn {
   background: #14498a;
-  color: white;
-  border: none;
+  color: #f6f8fc;
+  border: 1px solid #d4dfed;
+  border-radius: 3px;
   padding: 8px 12px;
   cursor: pointer;
   margin: 5px;
 }
-.product__card .btn:hover {
-  background: #0e315d;
+.product .btn:hover {
+  background: #071a31;
 }
-.related-products ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
+/* Оверлей */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f6f8fc;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
 }
-.related-products ul li {
-  flex: 1;
+/* Активный оверлей */
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+/* Диалог */
+dialog {
+  padding: 20px;
+  border: none;
+  border-radius: 3px;
+  max-width: 80%;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+dialog[open] {
+  opacity: 1;
+  transform: scale(1);
+}
+.other-products {
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media screen and (max-width: 768px) {
+  .other-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 0) {
+  .other-products {
+    grid-template-columns: 1fr;
+  }
 }
 footer {
   background: #f8f8f8;
