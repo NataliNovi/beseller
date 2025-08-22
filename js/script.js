@@ -1,17 +1,4 @@
-//
-
 // ---------- Счетчик корзины ----------
-// const cartButtons = document.querySelectorAll(".add-to-cart");
-// const cartCount = document.querySelector(".cart__count");
-// let cartItems = 0;
-
-// cartButtons.forEach((button) => {
-//   button.addEventListener("click", () => {
-//     cartItems += 1;
-//     cartCount.textContent = cartItems;
-//   });
-// });
-
 const cartButtons = document.querySelectorAll(".add-to-cart");
 const cartCount = document.querySelector(".cart__count");
 let cartItems = 0;

@@ -444,7 +444,6 @@ body {
 }
 .menu-burger {
   position: fixed;
-  top: 117px;
   right: -250px;
   width: 100%;
   height: auto;
@@ -456,7 +455,6 @@ body {
   pointer-events: none;
   transition: left 0.3s ease;
   z-index: 1000;
-  padding: 60px 0 60px 0;
 }
 @media screen and (max-width: 768px) {
   .menu-burger {
