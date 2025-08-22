@@ -25,7 +25,7 @@ cartButtons.forEach((button) => {
     const originalText = button.textContent;
 
     // Меняем текст на "Товар добавлен в корзину"
-    button.textContent = "Товар добавлен в корзину";
+    button.textContent = "Товар в корзине";
 
     //Через 2 секунды возвращаем исходный текст
     setTimeout(() => {
