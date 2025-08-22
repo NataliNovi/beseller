@@ -232,7 +232,11 @@ body {
       transition: left 0.3s ease;
       z-index: 1000;
       padding: 60px 0 60px 0;
-    }
+
+      @media screen and (max-width: @grid-breakpoint-md) {
+        top: 90px;
+      }}
+    
     
     .menu-burger ul {
       list-style: none;
