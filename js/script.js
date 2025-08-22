@@ -1,4 +1,17 @@
-// Счетчик корзины
+//
+
+// ---------- Счетчик корзины ----------
+// const cartButtons = document.querySelectorAll(".add-to-cart");
+// const cartCount = document.querySelector(".cart__count");
+// let cartItems = 0;
+
+// cartButtons.forEach((button) => {
+//   button.addEventListener("click", () => {
+//     cartItems += 1;
+//     cartCount.textContent = cartItems;
+//   });
+// });
+
 const cartButtons = document.querySelectorAll(".add-to-cart");
 const cartCount = document.querySelector(".cart__count");
 let cartItems = 0;
@@ -7,77 +20,56 @@ cartButtons.forEach((button) => {
   button.addEventListener("click", () => {
     cartItems += 1;
     cartCount.textContent = cartItems;
+
+    // Сохраняем старый текст кнопки
+    const originalText = button.textContent;
+
+    // Меняем текст на "Товар добавлен в корзину"
+    button.textContent = "Товар добавлен в корзину";
+
+    //Через 2 секунды возвращаем исходный текст
+    setTimeout(() => {
+      button.textContent = originalText;
+    }, 2000);
   });
 });
 
-// const burger = document.querySelector(".burger");
-// const nav = document.querySelector(".nav");
-// const overlayMenu = document.querySelector(".overlay-menu");
-// const links = document.querySelectorAll(".nav__list a");
-
-// Функция открытия/закрытия меню
-// function toggleMenu() {
-//   burger.classList.toggle("active");
-//   nav.classList.toggle("active");
-//   overlayMenu.classList.toggle("active");
-// }
-
-// Клик по бургеру
-//burger.addEventListener("click", toggleMenu);
-
-// Клик по оверлею — закрыть меню
-//overlayMenu.addEventListener("click", toggleMenu);
-
-// Клик по ссылкам — тоже закрыть меню
-//links.forEach((link) => link.addEventListener("click", toggleMenu));
-
+// ---------- Бургер-меню ----------
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".menu-burger");
-// создаём overlay
-const overlay = document.createElement("div");
-overlay.classList.add("menu-overlay");
-document.body.appendChild(overlay);
+const overlayMenu = document.createElement("div");
+overlayMenu.classList.add("menu-overlay");
+document.body.appendChild(overlayMenu);
 
 function toggleMenu() {
   burger.classList.toggle("active");
   menu.classList.toggle("active");
-  overlay.classList.toggle("active");
+  overlayMenu.classList.toggle("active");
 }
 
 burger.addEventListener("click", toggleMenu);
-overlay.addEventListener("click", toggleMenu);
+overlayMenu.addEventListener("click", toggleMenu);
 
-// функция для открытия/закрытия меню
-
-burger.addEventListener("click", toggleMenu);
-overlay.addEventListener("click", toggleMenu); // закрываем при клике на фон
-
-//const burger = document.querySelector('.burger');
-
-// burger.addEventListener('click', () => {
-//   burger.classList.toggle('active');
-//   menu.classList.toggle('active');
-// });
-
-// Скрытие шапки при скролле
+// ---------- Скрытие шапки при скролле ----------
 const header = document.querySelector(".site-header");
 let lastScroll = 0;
-const delta = 10;
 window.addEventListener("scroll", () => {
   const currentScroll = window.scrollY;
-  if (currentScroll > lastScroll) {
-    header.style.top = "-120px";
-  } else {
-    header.style.top = "0";
-  }
+  header.style.top = currentScroll > lastScroll ? "-120px" : "0";
   lastScroll = currentScroll;
 });
 
+// ---------- Информация о товарах ----------
 document.querySelectorAll(".productInfo").forEach((product) => {
   const infoBtn = product.querySelector(".infoBtn");
   const productDialog = product.querySelector(".productDialog");
   const closeBtn = product.querySelector(".closeBtn");
   const overlay = product.querySelector(".overlay");
+
+  if (!infoBtn || !productDialog || !closeBtn || !overlay) {
+    console.warn("Пропущен товар: отсутствует один из элементов", product);
+    return;
+  }
 
   infoBtn.addEventListener("click", () => {
     productDialog.showModal();
@@ -87,5 +79,52 @@ document.querySelectorAll(".productInfo").forEach((product) => {
   closeBtn.addEventListener("click", () => {
     productDialog.close();
     overlay.classList.remove("active");
+  });
+});
+
+// ---------- Рейтинг ----------
+document.querySelectorAll(".rating--interactive").forEach((ratingBlock) => {
+  const stars = ratingBlock.querySelectorAll(".star");
+  const avgEl = ratingBlock.querySelector(".rating__avg");
+  const votesEl = ratingBlock.querySelector(".rating__votes");
+
+  if (!stars.length || !avgEl || !votesEl) return;
+
+  let totalVotes = parseInt(ratingBlock.dataset.votes, 10) || 0;
+  let avgRating = parseFloat(ratingBlock.dataset.rating) || 0;
+  let userRated = false;
+  let userRating = 0;
+
+  function highlight(n) {
+    stars.forEach((s, i) => s.classList.toggle("active", i < n));
+  }
+
+  highlight(Math.round(avgRating));
+
+  stars.forEach((star) => {
+    star.addEventListener("mouseover", () => {
+      if (!userRated) highlight(+star.dataset.value);
+    });
+    star.addEventListener("mouseleave", () => {
+      if (!userRated) highlight(Math.round(avgRating));
+    });
+    star.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (userRated) return;
+      userRating = +star.dataset.value;
+      userRated = true;
+      avgRating =
+        totalVotes === 0
+          ? userRating
+          : (avgRating * totalVotes + userRating) / (totalVotes + 1);
+      totalVotes += 1;
+      avgEl.textContent = avgRating.toFixed(1);
+      votesEl.textContent = totalVotes;
+      highlight(userRating);
+      stars.forEach((s) => {
+        s.disabled = true;
+        s.style.cursor = "default";
+      });
+    });
   });
 });

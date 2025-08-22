@@ -43,182 +43,191 @@
       </nav>
 
     </div>
-    <!-- <div class="ovelay-menu"></div> -->
   </header>
 
   <main>
-    <section class="product">
-      <div class="container">
-        <article class="product__card">
-          <img src="./images/friges/1.jpg" alt="Товар" class="product__image">
-         <div class="product__description"> <h2 class="product__title">FrostFree 300 XL</h2>
-          <p class="product__price">Цена: 5999 руб.</p>
-          <div class="product__rating" aria-label="Рейтинг 3 из 5">
-            <span class="star active">★</span>
-            <span class="star active">★</span>
-            <span class="star active">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
+    <div class="container">
+      <!-- Главный товар -->
+
+    <section class="main-product">
+        <article class="main-product__card product info">
+          <div class="main-product__img">
+            <img class="main-product__image" src="./images/friges/1.jpg" alt="Товар 1" >
           </div>
-          <p>Высота, см: 188.4, Ширина, см: 56,</p> Полезный объем холодильной камеры: 300 л</p><p> Система охлаждения : NoFrost</p>
+         <div class="main-product__description">
+           <h2>FrostFree 300 XL</h2>
+          <p class="main-product__price">Цена: 5999 руб.</p>
+          <p>Оцените товар:</p>
+
+          <div class="rating rating--interactive" data-rating="4.3" data-votes="37">
+            <div class="rating__stars" role="radiogroup" aria-label="Оцените товар">
+              <button class="star" data-value="1" aria-label="1 звезда">★</button>
+              <button class="star" data-value="2" aria-label="2 звезды">★</button>
+              <button class="star" data-value="3" aria-label="3 звезды">★</button>
+              <button class="star" data-value="4" aria-label="4 звезды">★</button>
+              <button class="star" data-value="5" aria-label="5 звёзд">★</button>
+            </div>
+            <div class="rating__info">
+              Средний рейтинг: <span class="rating__avg">4.3</span>
+              (<span class="rating__votes">37</span> оценок)
+            </div>
+          </div>
+
+          <p>Высота, см: 188.4, Ширина, см: 56,</p> 
+          <p>Полезный объем холодильной камеры: 300 л</p>
+          <p> Система охлаждения : NoFrost</p>
           <ul>
             <li>Система быстрого охлаждения и замораживания</li>
             <li>Сенсорное управление и дисплей</li>
             <li>Энергоэффективность и низкий уровень шума</li>
           </ul>
 
-          <div class="product__actions">
-            <button class="btn add-to-cart">Добавить в корзину</button>
-             <a class = "productInfo">
-              <button class="btn infoBtn">i</button>
-              <div class="overlay"></div>
-              <dialog class="productDialog">
-           
+    
+            <button class="btn add-to-cart">В корзину</button>
+             <span class = "productInfo">
+              <button class="btn infoBtn">Подробнее</button>
 
-            <h2>Свойства товара</h2>
+             
+              <dialog class="productDialog">
             <p>Встраиваемый холодильник FrostFree 300 XL – это современное и надежное устройство, которое идеально впишется в любой интерьер. Изготовленный в Италии, этот холодильник сочетает в себе качество, функциональность и стильный дизайн. Габариты устройства составляют 188.4 см в высоту, 56 см в ширину и 55 см в глубину, что делает его удобным для встраивания в любую кухонную мебель. Общий полезный объем составляет 274 литра, что позволяет разместить достаточное количество продуктов для большой семьи.</p>
 
              <p> Устройство оснащено системой быстрого охлаждения Coolmatic и быстрого замораживания Frostmatic, которые обеспечивают сохранение свежести продуктов на длительное время.Система охлаждения NoFrost предотвращает образование инея и обледенения, а автоматическая система размораживания значительно упрощает уход за устройством.</p>
               
              <p> Устройство отличается высокой энергоэффективностью, относясь к классу энергопотребления E. Годовой расход электроэнергии составляет всего 213 кВт*час, а уровень шума не превышает 36 дБ. Работает холодильник от сети напряжением 220-240 В и частотой 50-60 Гц. Гарантийный срок на устройство составляет 12 месяцев.</p>
-            <button class="btn closeBtn">Закрыть</button>
+
+             <div class="closeBtn-container">
+              <button class="btn closeBtn">Закрыть</button>
+            </div>
           </dialog>
-        </a>
-
-
-        </div>
+          <div class="overlay"></div>
+        </span>
+         </div>
+      
         </article>
+      </section>
+     
+        <!-- Похожие товары -->
+        <h2>Похожие товары</h2>
 
-        <section class="related-products">
-          <h3>Похожие товары</h3>
-          <div class="other-products">
-            <!-- <li> -->
-              <article class="product__card">
-                <img src="./images/friges/2.jpg" alt="Товар 1">
-                <h3>FrostFree New G</h4>
-                <p>Цена: 4999 руб.</p>
-                <div class="product__rating">
-                  <span class="star active">★</span>
-                  <span class="star active">★</span>
-                  <span class="star">★</span>
-         
-                  <span class="star">★</span>
-                  <span class="star">★</span>
+        <div class="related-products__container">
+  
+          <div class="other-products__card productInfo">
+            <img class="other-products__image" src="./images/friges/1.jpg" alt="Холодильник 2">
+            <div class="other-products__description">
+              <h3>FrostFree New G</h3>
+  
+              <div class="rating rating--readonly" data-rating="4.0">
+                <div class="rating__visual">★★★★★</div>
+                <div class="rating__info">
+                  <span class="rating__avg">4.0</span>
                 </div>
-                <button class="btn add-to-cart">В корзину</button>
-                <a class = "productInfo">
-                  <button class="btn infoBtn">i</button>
-                  <div class="overlay"></div>
-                  <dialog class="productDialog">
-
-                <h2>Свойства товара</h2>
+              </div>
+             
+              <button class="btn infoBtn">Подробнее</button>
+              <button class="btn add-to-cart">В корзину</button>
+  
+              <dialog class="productDialog">
                 <p>Встраиваемый холодильник FrostFree New G – это современное и надежное устройство, которое идеально впишется в любой интерьер. Изготовленный в Италии, этот холодильник сочетает в себе качество, функциональность и стильный дизайн. Габариты устройства составляют 168.4 см в высоту, 56 см в ширину и 55 см в глубину, что делает его удобным для встраивания в любую кухонную мебель. Общий полезный объем составляет 274 литра, что позволяет разместить достаточное количество продуктов для большой семьи.</p>
     
                  <p> Устройство оснащено системой быстрого охлаждения Coolmatic и быстрого замораживания Frostmatic, которые обеспечивают сохранение свежести продуктов на длительное время. Сенсорная система управления и сенсорный цифровой дисплей делают использование холодильника максимально удобным и простым. Система охлаждения NoFrost предотвращает образование инея и обледенения, а автоматическая система размораживания значительно упрощает уход за устройством.</p>
                   
-                  <p>Морозильное отделение оснащено тремя ящиками, выполненными из того же материала. Производительность замораживания составляет 5 кг в сутки, что позволяет быстро заморозить большое количество продуктов. Индикация открытой двери предупреждает о возможной потере холода, а дверной упор справа обеспечивает удобство использования холодильника.</p>
-                  
                  <p> Устройство отличается высокой энергоэффективностью, относясь к классу энергопотребления E. Годовой расход электроэнергии составляет всего 213 кВт*час, а уровень шума не превышает 36 дБ. Работает холодильник от сети напряжением 220-240 В и частотой 50-60 Гц. Гарантийный срок на устройство составляет 12 месяцев.</p>
-                <button class="btn closeBtn">Закрыть</button>
-              </dialog>
-            </a>
-                
-  
-                
-      
-              </article>
-
-              <article class="product__card">
-                <img src="./images/friges/3.jpg" alt="Товар 2">
-                <h3>FrostFree 200 L</h4>
-                <p>Цена: 3599 руб.</p>
-                <div class="product__rating">
-                  <span class="star active">★</span>
-                  <span class="star active">★</span>
-                  <span class="star active">★</span>
-                  <span class="star">★</span>
-                  <span class="star">★</span>
+                <div class="closeBtn-container">
+                  <button class="btn closeBtn">Закрыть</button>
                 </div>
-                <button class="btn add-to-cart">В корзину</button>
-                <a class = "productInfo">
-                  <button class="btn infoBtn">i</button>
-                  <div class="overlay"></div>
-                  <dialog class="productDialog">
-
-                <h2>Свойства товара</h2>
-                <p>Встраиваемый холодильник FrostFree 200 L – это современное и надежное устройство, которое идеально впишется в любой интерьер. Изготовленный в Италии, этот холодильник сочетает в себе качество, функциональность и стильный дизайн. Габариты устройства составляют 158.4 см в высоту, 56 см в ширину и 55 см в глубину, что делает его удобным для встраивания в любую кухонную мебель. Общий полезный объем составляет 274 литра, что позволяет разместить достаточное количество продуктов для большой семьи.</p>
-                  
-                  <p>Морозильное отделение оснащено тремя ящиками, выполненными из того же материала. Производительность замораживания составляет 5 кг в сутки, что позволяет быстро заморозить большое количество продуктов. Индикация открытой двери предупреждает о возможной потере холода, а дверной упор справа обеспечивает удобство использования холодильника.</p>
-                  
-                 <p> Устройство отличается высокой энергоэффективностью, относясь к классу энергопотребления E. Годовой расход электроэнергии составляет всего 213 кВт*час, а уровень шума не превышает 36 дБ. Работает холодильник от сети напряжением 220-240 В и частотой 50-60 Гц. Гарантийный срок на устройство составляет 12 месяцев.</p>
-                <button class="btn closeBtn">Закрыть</button>
               </dialog>
-            </a>
-                
-                
-              </article>
-
-              <article class="product__card">
-                <img src="./images/friges/3.jpg" alt="Товар 2">
-                <h3>FrostFree 240 L</h4>
-                <p>Цена: 4999 руб.</p>
-                <div class="product__rating">
-                  <span class="star active">★</span>
-                  <span class="star active">★</span>
-                  <span class="star active">★</span>
-                  <span class="star">★</span>
-                  <span class="star">★</span>
-                </div>
-                <button class="btn add-to-cart">В корзину</button>
-                <a class = "productInfo">
-                  <button class="btn infoBtn">i</button>
-                  <div class="overlay"></div>
-                  <dialog class="productDialog">
-
-                <h2>Свойства товара</h2>
-                <p>Встраиваемый холодильник FrostFree 200 L – это современное и надежное устройство, которое идеально впишется в любой интерьер. Изготовленный в Италии, этот холодильник сочетает в себе качество, функциональность и стильный дизайн. Габариты устройства составляют 158.4 см в высоту, 56 см в ширину и 55 см в глубину, что делает его удобным для встраивания в любую кухонную мебель. Общий полезный объем составляет 274 литра, что позволяет разместить достаточное количество продуктов для большой семьи.</p>
-                  
-                  <p>Морозильное отделение оснащено тремя ящиками, выполненными из того же материала. Производительность замораживания составляет 5 кг в сутки, что позволяет быстро заморозить большое количество продуктов. Индикация открытой двери предупреждает о возможной потере холода, а дверной упор справа обеспечивает удобство использования холодильника.</p>
-                  
-                 <p> Устройство отличается высокой энергоэффективностью, относясь к классу энергопотребления E. Годовой расход электроэнергии составляет всего 213 кВт*час, а уровень шума не превышает 36 дБ. Работает холодильник от сети напряжением 220-240 В и частотой 50-60 Гц. Гарантийный срок на устройство составляет 12 месяцев.</p>
-                <button class="btn closeBtn">Закрыть</button>
-              </dialog>
-            </a>
-              
-              </article>
-
-              <article class="product__card">
-                <img src="./images/friges/4.jpg" alt="Товар 3">
-                <h3>FrostFree 280L </h4>
-                <p>Цена: 3999 руб.</p>
-                <div class="product__rating">
-                  <span class="star active">★</span>
-                  <span class="star active">★</span>
-                  <span class="star active">★</span>
-                  <span class="star">★</span>
-                  <span class="star">★</span>
-                </div>
-                <button class="btn add-to-cart">В корзину</button>
-                <a class = "productInfo">
-                  <button class="btn infoBtn">i</button>
-                  <div class="overlay"></div>
-                  <dialog class="productDialog">
-
-                <h2>Свойства товара</h2>
-                <p>Встраиваемый холодильник FrostFree 200 L – это современное и надежное устройство, которое идеально впишется в любой интерьер. Изготовленный в Италии, этот холодильник сочетает в себе качество, функциональность и стильный дизайн. Габариты устройства составляют 158.4 см в высоту, 56 см в ширину и 55 см в глубину, что делает его удобным для встраивания в любую кухонную мебель. Общий полезный объем составляет 274 литра, что позволяет разместить достаточное количество продуктов для большой семьи.</p>
-                  
-                  <p>Морозильное отделение оснащено тремя ящиками, выполненными из того же материала. Производительность замораживания составляет 5 кг в сутки, что позволяет быстро заморозить большое количество продуктов. Индикация открытой двери предупреждает о возможной потере холода, а дверной упор справа обеспечивает удобство использования холодильника.</p>
-                  
-                 <p> Устройство отличается высокой энергоэффективностью, относясь к классу энергопотребления E. Годовой расход электроэнергии составляет всего 213 кВт*час, а уровень шума не превышает 36 дБ. Работает холодильник от сети напряжением 220-240 В и частотой 50-60 Гц. Гарантийный срок на устройство составляет 12 месяцев.</p>
-                <button class="btn closeBtn">Закрыть</button>
-              </dialog>
-            </a>
-              </article>
-
+              <div class="overlay"></div>
+            </div>
           </div>
+  
+  
+          <div class="other-products__card productInfo">
+            <img class="other-products__image" src="./images/friges/2.jpg" alt="Холодильник 3">
+            <div class="other-products__description">
+              <h3>FrostFree 280L</h3>
+              <div class="rating rating--readonly" data-rating="4.5">
+                <div class="rating__visual">★★★★★</div>
+                <div class="rating__info">
+                  <span class="rating__avg">4.5</span>
+                </div>
+              </div>
+              <button class="btn infoBtn">Подробнее</button>
+              <button class="btn add-to-cart">В корзину</button>
+  
+              <dialog class="productDialog">
+                <p>Встраиваемый холодильник FrostFree 280L – это современное и надежное устройство, которое идеально впишется в любой интерьер. Изготовленный в Италии, этот холодильник сочетает в себе качество, функциональность и стильный дизайн. Габариты устройства составляют 168.4 см в высоту, 56 см в ширину и 55 см в глубину, что делает его удобным для встраивания в любую кухонную мебель. Общий полезный объем составляет 274 литра, что позволяет разместить достаточное количество продуктов для большой семьи.</p>
+    
+                <p> Устройство оснащено системой быстрого охлаждения Coolmatic и быстрого замораживания Frostmatic, которые обеспечивают сохранение свежести продуктов на длительное время. Сенсорная система управления и сенсорный цифровой дисплей делают использование холодильника максимально удобным и простым. Система охлаждения NoFrost предотвращает образование инея и обледенения, а автоматическая система размораживания значительно упрощает уход за устройством.</p>
+                 
+                <p> Устройство отличается высокой энергоэффективностью, относясь к классу энергопотребления E. Годовой расход электроэнергии составляет всего 213 кВт*час, а уровень шума не превышает 36 дБ. Работает холодильник от сети напряжением 220-240 В и частотой 50-60 Гц. Гарантийный срок на устройство составляет 12 месяцев.</p>
+                <div class="closeBtn-container">
+                  <button class="btn closeBtn">Закрыть</button>
+                </div>
+              </dialog>
+              <div class="overlay"></div>
+            </div>
+          </div>
+  
+      
+          <div class="other-products__card productInfo">
+            <img class="other-products__image" src="./images/friges/3.jpg" alt="Холодильник 4">
+            <div class="other-products__description">
+              <h3>FrostFree 240L</h3>
+              <div class="rating rating--readonly" data-rating="3.8">
+                <div class="rating__visual">★★★★★</div>
+  <div class="rating__info">
+    <span class="rating__avg">3.8</span>
+  </div>
+  </div>
+  <button class="btn infoBtn">Подробнее</button>
+  <button class="btn add-to-cart">В корзину</button>
+  
+  <dialog class="productDialog">
+    <p>Встраиваемый холодильник FrostFree 240L  – это современное и надежное устройство, которое идеально впишется в любой интерьер. Изготовленный в Италии, этот холодильник сочетает в себе качество, функциональность и стильный дизайн. Габариты устройства составляют 168.4 см в высоту, 56 см в ширину и 55 см в глубину, что делает его удобным для встраивания в любую кухонную мебель. Общий полезный объем составляет 274 литра, что позволяет разместить достаточное количество продуктов для большой семьи.</p>
+    
+    <p> Устройство оснащено системой быстрого охлаждения Coolmatic и быстрого замораживания Frostmatic, которые обеспечивают сохранение свежести продуктов на длительное время. Сенсорная система управления и сенсорный цифровой дисплей делают использование холодильника максимально удобным и простым. Система охлаждения NoFrost предотвращает образование инея и обледенения, а автоматическая система размораживания значительно упрощает уход за устройством.</p>
+     
+    <p> Устройство отличается высокой энергоэффективностью, относясь к классу энергопотребления E. Годовой расход электроэнергии составляет всего 213 кВт*час, а уровень шума не превышает 36 дБ. Работает холодильник от сети напряжением 220-240 В и частотой 50-60 Гц. Гарантийный срок на устройство составляет 12 месяцев.</p>
+  <div class="closeBtn-container">
+    <button class="btn closeBtn">Закрыть</button>
+  </div>
+  </dialog>
+  <div class="overlay"></div>
+  </div>
+  </div>
+
+  <div class="other-products__card productInfo">
+    <img class="other-products__image"src="./images/friges/4.jpg" alt="Холодильник 3">
+    <div class="other-products__description">
+      <h3>FrostFree 200L </h3>
+      <div class="rating rating--readonly" data-rating="4.5">
+        <div class="rating__visual">★★★★★</div>
+        <div class="rating__info">
+          <span class="rating__avg">4.5</span>
+        </div>
+      </div>
+      <button class="btn infoBtn">Подробнее</button>
+      <button class="btn add-to-cart">В корзину</button>
+
+      <dialog class="productDialog">
+        <p>Встраиваемый холодильник FrostFree 200L – это современное и надежное устройство, которое идеально впишется в любой интерьер. Изготовленный в Италии, этот холодильник сочетает в себе качество, функциональность и стильный дизайн. Габариты устройства составляют 168.4 см в высоту, 56 см в ширину и 55 см в глубину, что делает его удобным для встраивания в любую кухонную мебель. Общий полезный объем составляет 274 литра, что позволяет разместить достаточное количество продуктов для большой семьи.</p>
+    
+        <p> Устройство оснащено системой быстрого охлаждения Coolmatic и быстрого замораживания Frostmatic, которые обеспечивают сохранение свежести продуктов на длительное время. Сенсорная система управления и сенсорный цифровой дисплей делают использование холодильника максимально удобным и простым. Система охлаждения NoFrost предотвращает образование инея и обледенения, а автоматическая система размораживания значительно упрощает уход за устройством.</p>
+         
+        <p> Устройство отличается высокой энергоэффективностью, относясь к классу энергопотребления E. Годовой расход электроэнергии составляет всего 213 кВт*час, а уровень шума не превышает 36 дБ. Работает холодильник от сети напряжением 220-240 В и частотой 50-60 Гц. Гарантийный срок на устройство составляет 12 месяцев.</p>
+        <div class="closeBtn-container">
+          <button class="btn closeBtn">Закрыть</button>
+        </div>
+      </dialog>
+      <div class="overlay"></div>
+    </div>
+  </div>
+  
         </section>
       </div>
-    </section>
+    </div>
+    </div>
+  </div>
   </main>
 
   <footer class="site-footer">
@@ -226,9 +235,9 @@
       <section>
         <h2>Контакты</h2>
         <address>
-          г. Минск, ул. Примерная, 12<br>
+          г. Минск, ул. Солнечная, 12<br>
           Тел.: <a href="tel:+375291234567">+375 (29) 123-45-67</a><br>
-          Email: <a href="mailto:hello@demostore.by">hello@demostore.by</a>
+          Email: <a href="mailto:frigoshop@demostore.by">frigoshop@demostore.by</a>
         </address>
       </section>
       <section>
@@ -236,21 +245,154 @@
         <ul>
           <li><a href="#">Политика конфиденциальности</a></li>
           <li><a href="#">Условия продажи</a></li>
-          <li><a href="#">Возврат товара</a></li>
+          <li><a href="#">Доставка товара</a></li>
         </ul>
       </section>
     </div>
-  </footer>
-
-  <!-- <dialog id="productDialog">
-    <form method="dialog">
-      <h2>Подробное описание</h2>
-      <p>FrostFree 300 XL — современный двухкамерный холодильник с системой NoFrost, инверторным компрессором и расширенной зоной свежести. Удобная организация пространства, экономичность и низкий уровень шума.</p>
-      <menu>
-        <button value="cancel" class="btn">Закрыть</button>
-      </menu>
-    </form>
-  </dialog> -->
+  </footer>  
 
   <script src="./js/script.js"></script>
 </body>
+
+
+
+
+
+<!-- <main>
+  <div class="container">
+
+    <section class="main-product">
+      <div class="main-product__card productInfo">
+        <div class="main-product__image">
+          <img src="fridge1.jpg" alt="Холодильник">
+        </div>
+        <div class="main-product__description">
+          <h2>Холодильник модель 1</h2>
+          <p>Устройство отличается высокой энергоэффективностью, относясь к классу энергопотребления E. Годовой расход электроэнергии составляет всего 213 кВт*час, а уровень шума не превышает 36 дБ. Работает холодильник от сети напряжением 220-240 В и частотой 50-60 Гц. Гарантийный срок на устройство составляет 12 месяцев.</p>
+
+          <div class="rating rating--interactive" data-rating="4.3" data-votes="37">
+            <div class="rating__stars" role="radiogroup" aria-label="Оцените товар">
+              <button class="star" data-value="1" aria-label="1 звезда">★</button>
+              <button class="star" data-value="2" aria-label="2 звезды">★</button>
+              <button class="star" data-value="3" aria-label="3 звезды">★</button>
+              <button class="star" data-value="4" aria-label="4 звезды">★</button>
+              <button class="star" data-value="5" aria-label="5 звёзд">★</button>
+            </div>
+            <div class="rating__info">
+              Средний рейтинг: <span class="rating__avg">4.3</span> (<span class="rating__votes">37</span> оценок)
+            </div>
+          </div>
+
+          <button class="btn infoBtn">Подробнее</button>
+
+          <dialog class="productDialog">
+            <p>Полное описание холодильника модель 1.</p>
+            <div class="closeBtn-container">
+              <button class="btn closeBtn">Закрыть</button>
+            </div>
+          </dialog>
+          <div class="overlay"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-products">
+      <h2>Похожие товары</h2>
+      <div class="related-products__container">
+  
+        <div class="other-products__card productInfo">
+          <img src="fridge2.jpg" alt="Холодильник 2">
+          <div class="other-products__description">
+            <h3>Холодильник 2</h3>
+
+            <div class="rating rating--readonly" data-rating="4.0">
+              <div class="rating__visual">★★★★★</div>
+              <div class="rating__info">
+                <span class="rating__avg">4.0</span>
+              </div>
+            </div>
+            <button class="btn infoBtn">Подробнее</button>
+
+            <dialog class="productDialog">
+              <p>Полное описание холодильника 2.</p>
+              <div class="closeBtn-container">
+                <button class="btn closeBtn">Закрыть</button>
+              </div>
+            </dialog>
+            <div class="overlay"></div>
+          </div>
+        </div>
+
+
+        <div class="other-products__card productInfo">
+          <img src="fridge3.jpg" alt="Холодильник 3">
+          <div class="other-products__description">
+            <h3>Холодильник 3</h3>
+            <div class="rating rating--readonly" data-rating="4.5">
+              <div class="rating__visual">★★★★★</div>
+              <div class="rating__info">
+                <span class="rating__avg">4.5</span>
+              </div>
+            </div>
+            <button class="btn infoBtn">Подробнее</button>
+
+            <dialog class="productDialog">
+              <p>Полное описание холодильника 3.</p>
+              <div class="closeBtn-container">
+                <button class="btn closeBtn">Закрыть</button>
+              </div>
+            </dialog>
+            <div class="overlay"></div>
+          </div>
+        </div>
+
+    
+        <div class="other-products__card productInfo">
+          <img src="fridge4.jpg" alt="Холодильник 4">
+          <div class="other-products__description">
+            <h3>Холодильник 4</h3>
+            <div class="rating rating--readonly" data-rating="3.8">
+              <div class="rating__visual">★★★★★</div>
+<div class="rating__info">
+  <span class="rating__avg">3.8</span>
+</div>
+</div>
+<button class="btn infoBtn">Подробнее</button>
+
+<dialog class="productDialog">
+<p>Полное описание холодильника 4.</p>
+<div class="closeBtn-container">
+  <button class="btn closeBtn">Закрыть</button>
+</div>
+</dialog>
+<div class="overlay"></div>
+</div>
+</div>
+
+
+<div class="other-products__card productInfo">
+<img src="fridge5.jpg" alt="Холодильник 5">
+<div class="other-products__description">
+<h3>Холодильник 5</h3>
+<div class="rating rating--readonly" data-rating="4.2">
+<div class="rating__visual">★★★★★</div>
+<div class="rating__info">
+  <span class="rating__avg">4.2</span>
+</div>
+</div>
+<button class="btn infoBtn">Подробнее</button>
+
+<dialog class="productDialog">
+<p>Полное описание холодильника 5.</p>
+<div class="closeBtn-container">
+  <button class="btn closeBtn">Закрыть</button>
+</div>
+</dialog>
+<div class="overlay"></div>
+</div>
+</div>
+
+</div>
+</section>
+</div>
+</main> -->
