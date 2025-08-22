@@ -118,11 +118,21 @@ body {
       width: 100px;
       border-radius: 50px;
       margin-right: 10px;
+
+      @media screen and (max-width: @grid-breakpoint-md) {
+        width: 60px;
+        height: 50px;
+        }
     }
 
     &__name {
       color: @primary-color;
       font-family: "Cal Sans", sans-serif;
+      font-size: 36px;
+      @media screen and (max-width: @grid-breakpoint-md) {
+        font-size: 22px;
+        }
+     
     }
   }
 

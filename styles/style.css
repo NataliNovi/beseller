@@ -349,9 +349,21 @@ body {
   border-radius: 50px;
   margin-right: 10px;
 }
+@media screen and (max-width: 768px) {
+  .site-header .logo__image {
+    width: 60px;
+    height: 50px;
+  }
+}
 .site-header .logo__name {
   color: #14498a;
   font-family: "Cal Sans", sans-serif;
+  font-size: 36px;
+}
+@media screen and (max-width: 768px) {
+  .site-header .logo__name {
+    font-size: 22px;
+  }
 }
 .site-header .nav {
   display: none;
