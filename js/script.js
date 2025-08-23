@@ -40,9 +40,20 @@ overlayMenu.addEventListener("click", toggleMenu);
 // ---------- Скрытие шапки при скролле ----------
 const header = document.querySelector(".site-header");
 let lastScroll = 0;
+const headerHeight = header.offsetHeight;
+
 window.addEventListener("scroll", () => {
   const currentScroll = window.scrollY;
-  header.style.top = currentScroll > lastScroll ? "-120px" : "0";
+
+  // Если скролл вверх или мы в самом верху страницы — показываем хедер
+  if (currentScroll < lastScroll || currentScroll <= 0) {
+    header.style.top = "0";
+  }
+  // Если скролл вниз и мы прошли высоту шапки — скрываем её
+  else if (currentScroll > headerHeight) {
+    header.style.top = `-${headerHeight}px`;
+  }
+
   lastScroll = currentScroll;
 });
 
